@@ -25,7 +25,7 @@ By being open source, we are providing a cross-border spillover effect, solidify
 - **[Open Managed Control Pane](https://github.com/open-component-model/ocm-controller):**  The Open Managed Control Pane is designed to enable the automated deployment of software using the Open Component Model and Flux.
 - **[Open Micro Front End Platform (openMFP)](https://github.com/openmfp):**  OpenMFP brings together micro front ends and APIs into a cohesive platform, allowing teams to contribute components while maintaining their independence
 - **[CobaltCore](https://github.com/cobaltcore-dev):**  CobaltCore is a reimagined, opinionated, and Kubernetes enabled OpenStack distribution, which complements IronCore and bridges the obligation to support the numerous non-cloud-native workloads by ensuring backward compatibility.
-- **[IronCore](https://github.com/ironcore-dev):**  IronCore provides the a reference for compounded software layers for inventorying, managing, and maintaining baremetal using Kubernetes’ principles.
+- **[IronCore](https://github.com/ironcore-dev):**  IronCore provides a reference for compounded software layers for inventorying, managing, and maintaining baremetal using Kubernetes’ principles.
 - **[Greenhouse](https://github.com/cloudoperators):**  Greenhouse is a platform to simplify the management of large cloud infrastructures.
 
 ## :busts_in_silhouette: Get Involved
