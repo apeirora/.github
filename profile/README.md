@@ -18,7 +18,7 @@ By being open source, we are providing a cross-border spillover effect, solidify
 
 ## :penguin: ApeiroRA Projects
 
-- **[Open Resource Discovery](https://github.com/SAP/open-resource-discovery):** ORD allows service providers to describe and customers poll their services in a uniform manner.
+- **[Open Resource Discovery](https://github.com/open-resource-discovery/specification):** ORD allows service providers to describe and customers poll their services in a uniform manner.
 - **[Garden Linux](https://github.com/gardenlinux/):**  Garden Linux is a small auditable Debian derivative which serves as the reference OS in ApeiroRA with respect to components.
 - **[Gardener](https://github.com/gardener/):**  Gardener supports a wide range of cloud providers, allowing deployment and management of Kubernetes clusters across different cloud environments.
 - **[Open Component Model](https://github.com/open-component-model/):** OCM provides auditability in service offerings by providing a Software Bill of Delivery (SBoD).
