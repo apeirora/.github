@@ -1,0 +1,173 @@
+# https://github.com/orgs/apeirora/repositories?q=opentelemetry
+suborgrepos:
+  - opentelemetry-go
+  - opentelemetry-collector
+  - opentelemetry-specification
+  - opentelemetry-collector-contrib
+  - opentelemetry-java
+  - opentelemetry-go-contrib
+  - open-telemetry-community
+  - semantic-conventions
+  - audit-log-poc-for-otel
+
+# This are the settings that will be applied to the repositories listed above.
+# See https://docs.github.com/en/rest/repos/repos?apiVersion=2022-11-28#create-an-organization-repository for all available settings for a repository
+repository:
+  # A URL with more information about the repository
+  homepage: https://apeirora.eu/
+
+  # Create an initial commit with empty README.
+  # Keep this set to true in most cases since many of the policies below cannot be implemented on bare repos
+  auto_init: true
+
+  # A list of topics to set on the repository - can alternatively set like this: [github, probot, new-topic, another-topic, topic-12]
+  topics:
+    - opentelemetry
+    - otel
+    - audit-log
+
+  # Settings for Code security and analysis
+  # Dependabot Alerts
+  security:
+    enableVulnerabilityAlerts: true
+    enableAutomatedSecurityFixes: true
+
+  # Either `true` to enable issues for this repository, `false` to disable them.
+  has_issues: true
+
+  # Either `true` to enable projects for this repository, or `false` to disable them.
+  # If projects are disabled for the organization, passing `true` will cause an API error.
+  has_projects: true
+
+  # Either `true` to enable the wiki for this repository, `false` to disable it.
+  has_wiki: false
+
+  # The default branch for this repository.
+  default_branch: main
+
+  # Desired language or platform [.gitignore template](https://github.com/github/gitignore)
+  # to apply. Use the name of the template without the extension.
+  # For example, "Haskell".
+  gitignore_template: go
+
+  # Choose an [open source license template](https://choosealicense.com/)
+  # that best suits your needs, and then use the
+  # [license keyword](https://help.github.com/articles/licensing-a-repository/#searching-github-by-license-type)
+  # as the `license_template` string. For example, "mit" or "mpl-2.0".
+  license_template: Apache-2.0
+
+  # Either `true` to allow squash-merging pull requests, or `false` to prevent
+  # squash-merging.
+  allow_squash_merge: true
+
+  # Required when using `squash_merge_commit_message`.
+  # The default value for a squash merge commit title:
+  # - `PR_TITLE` - default to the pull request's title.
+  # - `COMMIT_OR_PR_TITLE` - default to the commit's title (if only one commit) or the pull request's title (when more than one commit).
+  squash_merge_commit_title: PR_TITLE
+
+  # The default value for a squash merge commit message:
+  # - `PR_BODY` - default to the pull request's body.
+  # - `COMMIT_MESSAGES` - default to the branch's commit messages.
+  # - `BLANK` - default to a blank commit message.
+  squash_merge_commit_message: PR_BODY
+
+  # Either `true` to allow merging pull requests with a merge commit, or `false`
+  # to prevent merging pull requests with merge commits.
+  allow_merge_commit: false
+
+  # Either `true` to allow rebase-merging pull requests, or `false` to prevent
+  # rebase-merging.
+  allow_rebase_merge: true
+
+  # Either `true` to allow auto-merge on pull requests,
+  # or `false` to disallow auto-merge.
+  # Default: `false`
+  allow_auto_merge: true
+
+  # Either `true` to allow automatically deleting head branches
+  # when pull requests are merged, or `false` to prevent automatic deletion.
+  # Default: `false`
+  delete_branch_on_merge: true
+
+  # Either `true` to  allow update branch on pull requests,
+  # or `false` to disallow update branch.
+  # Default: `false`
+  allow_update_branch: true
+
+# The following attributes are applied to any repo within the org
+# So if a repo is not listed above is created or edited
+# The app will apply the following settings to it
+labels:
+  ## The different components of the project
+  - name: component/github-actions
+    color: 25399e
+    description: Changes on GitHub Actions or within `.github/` directory
+  ## The different kinds of issues and pull requests - will be used for release notes grouping
+  - name: kind/bugfix
+    color: B60205
+    description: Bug
+  - name: kind/feature
+    color: c7def8
+    description: new feature, enhancement, improvement, extension
+  - name: kind/task
+    color: c7def8
+    description: small task, normally part of feature or epic
+  - name: kind/epic
+    color: c7def8
+    description: Large multi-story topic
+  - name: kind/poc
+    color: c7def8
+    description: Proof of Concept or Prototype
+  - name: kind/chore
+    color: c7def8
+    description: chore, maintenance, etc.
+  - name: kind/dependency
+    color: c7def8
+    description: dependency update, etc.
+  - name: kind/refactor
+    color: c7def8
+    description: refactoring, maintenance, etc.
+  - name: kind/skip-release-notes
+    color: c7def8
+    description: Pull request will not appear in release notes
+  ## The different states of an issue or pull request for easier collaboration
+  - name: dev/wont-fix
+    color: fef2c0
+    description: Will not fix the issue
+  ## The different sizes of an issue or pull request
+  - name: size/xs
+    color: bfdadc
+    description: Extra small
+  - name: size/s
+    color: bfdadc
+    description: Small
+  - name: size/m
+    color: bfdadc
+    description: Medium
+  - name: size/l
+    color: bfdadc
+    description: Large
+  - name: size/xl
+    color: bfdadc
+    description: Extra large
+  ## Breaking changes, which will require special attention or follow-up actions
+  - name: "!BREAKING-CHANGE!"
+    color: B60205
+    description: Breaking change in API or ocm-cli or spec
+  ## PRs that should not be merged yet (although they are ready), because they are waiting for something else to be done first. If you are still working on the PR, put it in 'draft' mode instead or use project board status 'in pro'.
+  - name: do-not-merge
+    color: B60205
+    description: Do not merge this PR yet!
+
+# Teams
+# See https://docs.github.com/en/rest/teams/teams?apiVersion=2022-11-28#create-a-team for available options
+teams:
+  - name: audit-log-poc-for-otel-admin
+    permission: admin
+  - name: audit-logger
+    permission: write
+
+# Branch protection rules
+# See https://docs.github.com/en/rest/branches/branch-protection?apiVersion=2022-11-28#update-branch-protection for available options
+branches: []
