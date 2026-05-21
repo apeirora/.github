@@ -1,0 +1,11 @@
+restrictedRepos:
+  # You can exclude certain repos from safe-settings processing
+  # If no file is specified, then the following repositories - 'admin', '.github', 'safe-settings' are exempted by default
+  exclude:
+    - '~ALL' # exclude all repos by default, then include only the ones we want to manage with safe-settings
+  # Alternatively you can only include certain repos
+  include:
+    - opentelemetry-*
+    - open-telemetry-*
+    - semantic-conventions
+    - audit-log-poc-for-otel
