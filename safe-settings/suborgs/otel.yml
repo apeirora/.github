@@ -166,7 +166,7 @@ teams:
   - name: audit-log-poc-for-otel-admin
     permission: maintain
   - name: audit-logger
-    permission: write
+    permission: push
 
 # Branch protection rules
 # See https://docs.github.com/en/rest/branches/branch-protection?apiVersion=2022-11-28#update-branch-protection for available options
