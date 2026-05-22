@@ -28,6 +28,9 @@ rulesets:
       - actor_id: 13010991 # audit-logger
         actor_type: Team
         bypass_mode: pull_request
+      - actor_id: 3795032 # apeirora-bot
+        actor_type: Integration
+        bypass_mode: always
       - actor_id: 29110 # dependabot
         actor_type: Integration
         bypass_mode: always
