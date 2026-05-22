@@ -37,6 +37,6 @@ jobs:
           GITHUB_CLIENT_ID: ${{ secrets.APEIRORA_BOT_CLIENT_ID }}
           GITHUB_CLIENT_SECRET: ${{ secrets.APEIRORA_BOT_CLIENT_SECRET }}
           ADMIN_REPO: .github
-          LOG_LEVEL: trace
+          # LOG_LEVEL: trace
           CONFIG_PATH: safe-settings
           DEPLOYMENT_CONFIG_FILE: ${{ github.workspace }}/safe-settings/config.yml
