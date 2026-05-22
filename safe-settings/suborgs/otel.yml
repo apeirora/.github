@@ -164,7 +164,7 @@ labels:
 # See https://docs.github.com/en/rest/teams/teams?apiVersion=2022-11-28#create-a-team for available options
 teams:
   - name: audit-log-poc-for-otel-admin
-    permission: admin
+    permission: maintain
   - name: audit-logger
     permission: write
 
