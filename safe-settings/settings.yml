@@ -25,9 +25,6 @@ rulesets:
       - actor_id: 1
         actor_type: OrganizationAdmin
         bypass_mode: always
-      - actor_id: 13034543 # audit-log-poc-for-otel-admin
-        actor_type: Team
-        bypass_mode: always
       - actor_id: 13010991 # audit-logger
         actor_type: Team
         bypass_mode: pull_request
