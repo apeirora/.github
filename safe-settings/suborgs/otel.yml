@@ -1,14 +1,15 @@
 # https://github.com/orgs/apeirora/repositories?q=opentelemetry
 suborgrepos:
-  - opentelemetry-go
-  - opentelemetry-collector
-  - opentelemetry-specification
-  - opentelemetry-collector-contrib
-  - opentelemetry-java
-  - opentelemetry-go-contrib
-  - open-telemetry-community
-  - semantic-conventions
   - audit-log-poc-for-otel
+  - open-telemetry-community
+  - opentelemetry-collector
+  - opentelemetry-collector-contrib
+  - opentelemetry-demo
+  - opentelemetry-go
+  - opentelemetry-go-contrib
+  - opentelemetry-java
+  - opentelemetry-specification
+  - semantic-conventions
 
 # This are the settings that will be applied to the repositories listed above.
 # See https://docs.github.com/en/rest/repos/repos?apiVersion=2022-11-28#create-an-organization-repository for all available settings for a repository
