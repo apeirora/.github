@@ -172,3 +172,45 @@ teams:
 # Branch protection rules
 # See https://docs.github.com/en/rest/branches/branch-protection?apiVersion=2022-11-28#update-branch-protection for available options
 branches: []
+
+# Repository ruleset delta for OpenTelemetry repositories in this suborg
+# Global default-branch rules are managed in safe-settings/settings.yml.
+rulesets:
+  - name: otel-auditing-upstream
+    target: branch
+    enforcement: active
+    conditions:
+      ref_name:
+        include:
+          - refs/heads/auditing
+          - refs/heads/upstream
+        exclude: []
+    rules:
+      - type: deletion
+      - type: non_fast_forward
+      - type: required_signatures
+      - type: code_scanning
+        parameters:
+          code_scanning_tools:
+            - tool: CodeQL
+              security_alerts_threshold: high_or_higher
+              alerts_threshold: errors
+      - type: pull_request
+        parameters:
+          required_approving_review_count: 1
+          dismiss_stale_reviews_on_push: true
+          required_reviewers: []
+          require_code_owner_review: false
+          require_last_push_approval: true
+          required_review_thread_resolution: true
+          allowed_merge_methods:
+            - squash
+            - rebase
+      - type: copilot_code_review
+        parameters:
+          review_on_push: true
+          review_draft_pull_requests: true
+    bypass_actors:
+      - actor_id: 5
+        actor_type: RepositoryRole
+        bypass_mode: always
