@@ -182,6 +182,7 @@ rulesets:
     conditions:
       ref_name:
         include:
+          - refs/heads/main
           - refs/heads/auditing
           - refs/heads/upstream
         exclude: []
