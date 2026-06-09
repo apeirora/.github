@@ -100,6 +100,9 @@ repository:
 # So if a repo is not listed above is created or edited
 # The app will apply the following settings to it
 labels:
+  ## required by OpenTelemetry upstream GHA
+  - name: api-change
+    color: B60205
   ## The different components of the project
   - name: component/github-actions
     color: 25399e
