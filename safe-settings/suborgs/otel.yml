@@ -1,6 +1,7 @@
 # https://github.com/orgs/apeirora/repositories?q=opentelemetry
 suborgrepos:
   - audit-log-poc-for-otel
+  - AuditAPI
   - open-telemetry-community
   - opentelemetry-collector
   - opentelemetry-collector-contrib
