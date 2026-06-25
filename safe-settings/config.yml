@@ -9,3 +9,4 @@ restrictedRepos:
     - open-telemetry-*
     - semantic-conventions
     - audit-log-poc-for-otel
+    - AuditAPI
